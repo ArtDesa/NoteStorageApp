@@ -1,0 +1,42 @@
+{
+  "notes": [
+    {
+      "id": 12,
+      "title": "TestNote",
+      "body": "TestingTestingTestinTestinTesting",
+      "dateCreated": "8/7/2023",
+      "favorite": true
+    },
+    {
+      "id": 13,
+      "title": "TestNote2",
+      "body": "Testing2Testing2Testing2Testing2Testing2",
+      "dateCreated": "8/7/2023",
+      "favorite": true
+    },
+    {
+      "title": "Testfor",
+      "body": "testtesttest",
+      "dateCreated": "8/14/2023",
+      "favorite": true,
+      "id": 14
+    }
+  ],
+  "users": [
+    {
+      "username": "Tester",
+      "password": "tester",
+      "id": 22
+    },
+    {
+      "username": "Artdesa",
+      "password": "Test123",
+      "id": 23
+    },
+    {
+      "username": "Mardesa",
+      "password": "mar123",
+      "id": 24
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+<!--<p>note-by-date works!</p>-->
+
+<button (click)="goToHome()">Back</button><br><br>
+
+<h1>Note details that match {{dateString}}<h1><br><br>
+<br><br><br><br>
+
+<!-- Loop for all notes that match requested date to search for -->
+<div *ngFor="let obj of allNotes">
+    <div *ngIf="obj.dateCreated == dateString">
+        Title: {{obj.title}}<br><br>
+        {{obj.body}}<br><br>
+        Date Created: {{obj.dateCreated}}<br>
+        Favorite: {{obj.favorite}}<br>
+    </div>
+</div>
+
+

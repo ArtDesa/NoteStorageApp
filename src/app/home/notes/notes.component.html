@@ -1,0 +1,13 @@
+<br><br><br><br>
+
+<h1>Here are all of your notes:</h1><br>
+
+<br><button (click)="goToHome()">Return to Home</button><br><br><br>
+
+
+<!-- Loops note component to display all notes in the notes list -->
+<div *ngFor="let obj of notes">
+    
+    <app-note [note]="obj" (noteEvent)="sendNote($event)" (noteDeleteEvent)="deleteNote($event)"></app-note>
+    
+</div>

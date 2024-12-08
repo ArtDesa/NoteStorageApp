@@ -1,0 +1,27 @@
+<br><br>
+<button (click)="goToHome()">Back</button><br>
+
+<h1>Fill in New Note:<h1><br><br>
+
+<form #addForm="ngForm" (ngSubmit)="addToNotes(addForm)">
+    <label>Title: </label>
+    <input ngModel name="title" #title="ngModel" required>
+    <span style="color:red" *ngIf="title.touched && title.invalid"><br>*Please provide a title for the note.</span>
+    <br>
+
+    <label>Body: </label><br>
+    <textarea ngModel name="body" #body="ngModel" required></textarea>
+    <span style="color:red" *ngIf="body.touched && body.invalid"><br>*Please fill in the note.</span>
+    <br>
+
+    <label>Favorite?: </label><br>
+    <label>Yes</label>
+    <input ngModel type="radio" name="favorite" #favorite="ngModel" [value]="true" required>
+    <label>No</label>
+    <input ngModel type="radio" name="favorite" #favorite="ngModel" [value]="false" required>
+    <br>
+    
+    <button type="submit" [disabled]="addForm.form.invalid">Add to Notes</button>
+    
+    <br><br>
+</form>

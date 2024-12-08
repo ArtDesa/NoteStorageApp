@@ -1,0 +1,28 @@
+
+<br><br><button (click)="goToHome()">Back to Home</button><br><br>
+
+<h1>Edit Note Details:<h1><br>
+
+<form #editForm="ngForm" (ngSubmit)="onSave(editForm)">
+    <label>Title: </label>
+    <input ngModel name="title" #title="ngModel" [(ngModel)]="note.title" required>
+    <span style="color:red" *ngIf="title.touched && title.invalid"><br>*Please provide a title for the note.</span>
+    <br>
+
+    <label>Body: </label><br>
+    <textarea ngModel name="body" #body="ngModel" [(ngModel)]="note.body" required></textarea>
+    <span style="color:red" *ngIf="body.touched && body.invalid"><br>*Please fill in the note.</span>
+    <br>
+
+    <label>Favorite?: </label><br>
+    <label for="yes">Yes</label>
+    <input type="radio" id="yes" name="favorite" value="yes" #favorite="ngModel" [(ngModel)]="yesOrNo" required>
+    <label for="no">No</label>
+    <input type="radio" id="no" name="favorite" value="no" #favorite="ngModel" [(ngModel)]="yesOrNo" required>
+    <br>
+    
+    <button type="submit" [disabled]="editForm.form.invalid">Save</button>
+
+    <br><br>
+</form>
+

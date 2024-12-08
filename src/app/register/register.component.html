@@ -1,0 +1,23 @@
+<h1>Please fill in the following to register: </h1>
+<br>
+<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+    <label>Username:</label><br>
+    <input ngModel name="username" #username="ngModel" required minlength="6">
+    <span style="color:red" *ngIf="username.touched && username.invalid"><br>*Username is required of at least 6 characters.</span>
+    <br>
+
+    <label>Password:</label><br>
+    <input ngModel name="password" #password="ngModel" required>
+    <span style="color:red" *ngIf="password.touched && password.errors?.['required']"><br>*Password is required, please enter a password.</span>
+    <br>
+
+    <label>Confirm Password:</label><br>
+    <input ngModel name="confirmPassword" #confirmPassword="ngModel" required>
+    <span style="color:red" *ngIf="confirmPassword.touched && confirmPassword.invalid"><br>*Confirm Password is required, please enter a username.</span>
+    <br>
+    
+    <button type="submit" [disabled]="registerForm.form.invalid">Submit</button>
+    <br><br>
+
+</form>
+    <button (click)="goToLogin()">Back to Login</button>
