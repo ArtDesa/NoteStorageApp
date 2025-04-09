@@ -1,0 +1,30 @@
+h1 {
+    font-size: 2em;
+    padding-top: 15%;
+}
+
+body {
+    position: absolute;
+    margin: auto;
+    padding: auto;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    display: grid;
+    background: linear-gradient(to right, #6481de, #b8b8c4, #6481de);
+    overflow: auto;
+}
+
+#homeButtonDiv {
+    padding-bottom: 10%;
+}
+
+#listContainer {
+    border: 4px solid black;
+    padding: 20px;
+}
+
+#eachNote {
+    border: 2px solid black;
+    margin: 20px;
+}

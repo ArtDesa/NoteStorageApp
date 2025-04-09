@@ -1,13 +1,18 @@
-<br><br><br><br>
+<body>
+<div id="insideBody">
 
-<h1>Here are all of your notes:</h1><br>
+<h1 id="headerTag">Here are all of your notes:</h1>
 
-<br><button (click)="goToHome()">Return to Home</button><br><br><br>
-
+<div id="homeButtonDiv">
+<button id="returnHomeButton" (click)="goToHome()">Return to Home</button>
+</div>
 
 <!-- Loops note component to display all notes in the notes list -->
-<div *ngFor="let obj of notes">
-    
+<div id="listContainer">
+<div id="eachNote" *ngFor="let obj of notes"> 
     <app-note [note]="obj" (noteEvent)="sendNote($event)" (noteDeleteEvent)="deleteNote($event)"></app-note>
-    
 </div>
+</div>
+
+</div>
+</body>
