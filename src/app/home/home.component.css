@@ -1,0 +1,68 @@
+h1 {
+    font-size: 2em;
+}
+
+body {
+    position: absolute;
+    margin: auto;
+    padding: auto;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    display: grid;
+    background: linear-gradient(to right, #6481de, #b8b8c4, #6481de);
+    overflow: auto;
+}
+
+#insideBody {
+    margin: auto;
+}
+
+#favoriteNotesList{
+    border: 2px solid black;
+    padding: 20px;
+}
+
+#mostRecentList {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+#viewNoteButton {
+    margin-top: 40px;
+}
+
+#dateDiv {
+    margin-top: 30px;
+}
+
+#labelForDate {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+#dateBox {
+    margin-top: 20px;
+}
+
+#noteDate {
+    width: 135px; /* Adjust as needed */
+    height: 25px; /* Changes height */
+    font-size: 1.25em;
+}
+
+#searchNoteButton {
+    margin-left: 20px;
+}
+
+#addNewNoteButton {
+    margin-top: 30px;
+    margin-bottom: 40%;
+}
+
+.button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+}

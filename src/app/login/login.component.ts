@@ -88,7 +88,7 @@ export class LoginComponent implements OnInit {
   
 
   goToRegister(){
-    this.router.navigate(['/regster']);
+    this.router.navigate(['/register']);
   }
 
 

@@ -1,27 +1,14 @@
-# CaseStudy
+# NoteStorageApp
+
+This application allows a user to register, login, and then write notes which they can save. They can also mark a note to add it to their favorites before they save it. The user can view all their saved notes, and can search for a specific note based on the date it was created. The app makes use of a JSON server to act as a backend to store and confirm registered users and to store and retrieve notes saved.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
-## Development server
+## How to start the NoteStorage app
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Start the JSON server 'backend' first (uses db.json file) that stores and retrieves data, with the command: json-server --watch db.json. This is hosted at http://localhost:3000/. 
+Then run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Provide a Username and Password for an already existing account or proceed to the Register page to create a new login. Once logged in, the Home page will be loaded displaying three of the most recently created notes and three of the most recent notes to have been saved as a favorite. 

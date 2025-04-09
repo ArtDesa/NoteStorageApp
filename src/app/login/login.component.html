@@ -1,22 +1,29 @@
+<html>
+<body>
+<div id="insideBody">
 <h1>Please log in!</h1><br>
 
-<form [formGroup]="loginForm" (ngSubmit)="login()">
-    <label>Username:</label><br>
-    <input formControlName="username">
+<form class="loginForm" [formGroup]="loginForm" (ngSubmit)="login()">
+    <label class="loginLabel">Username:</label><br>
+    <input class="inputBox" formControlName="username">
     <span style="color:red" *ngIf="loginForm.get('username').touched && username.invalid"><br>*Username is requires at least 6 characters.</span>
     <br>
 
-    <label>Password:</label><br>
-    <input formControlName="password">
+    <label class="loginLabel">Password:</label><br>
+    <input class="inputBox" formControlName="password">
     <span style="color:red" *ngIf="loginForm.get('password').touched && password.invalid">*Please provide a password</span>
     <br>
 
-    <label>Confirm Password:</label><br>
-    <input formControlName="confirmPassword"><br>
+    <label class="loginLabel">Confirm Password:</label><br>
+    <input class="inputBox" formControlName="confirmPassword"><br>
 
-    <br><button type="submit" [disabled]="loginForm.invalid">Login</button> 
+    <br><button class="button" type="submit" [disabled]="loginForm.invalid">Login</button> 
     <br><br>
     
 </form>
-
-<button (click)="goToRegister()">Register</button>
+<div>
+<button id="registerButton" class="button" (click)="goToRegister()">Register</button>
+</div>
+</div>
+</body>
+</html>

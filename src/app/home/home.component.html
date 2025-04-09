@@ -1,7 +1,10 @@
+
+<body>
+<div id="insideBody">
 <h1>Welcome to NoteStore!</h1><br>
 
 <h2>Your Favorites!</h2><br>
-
+<div id="favoriteNotesList">
 <div *ngFor="let obj of notes">
     <div *ngIf="obj.favorite === true">
         {{obj.title}}<br>
@@ -11,10 +14,11 @@
         {{obj.noteID}}<br><br><br><br>
     </div>
 </div>
-
+</div>
 <br><h2>3 Most Recent Notes:</h2><br>
 <!-- last 3 notes in array. If notes < 3 -> loop all. If notes > 3, loop last 3  -->
 <!-- Uses notes.slice(-3) to get last 3 notes  -->
+<div id="mostRecentList">
 <div *ngFor="let obj of lastThreeNotes">
     {{obj.title}}<br>
     {{obj.body}}<br>
@@ -22,15 +26,20 @@
     {{obj.favorite}}<br>
     {{obj.noteID}}<br><br><br><br>
 </div>
+</div>
+<button id="viewNoteButton" class="button" (click)="goToNotes()">View All Notes</button><br><br>
 
-<button (click)="goToNotes()">View All Notes</button><br><br>
-
-<label>Please provide the date of a note:</label><br>
+<div id="dateDiv">
+<label id="labelForDate">Please provide the date of a note:</label><br>
+<div id="dateBox">
 <input type="date" name="noteDate" id="noteDate" [(ngModel)]="date">
-<button (click)="goToNote()">Search for a note</button><br><br>
+<button id="searchNoteButton" class="button" (click)="goToNote()">Search for a note</button><br><br>
 {{date}}
+</div>
+</div>
 
-<button (click)="goToNewNote()">Add a new note</button><br>
+<button id="addNewNoteButton" class="button" (click)="goToNewNote()">Add a new note</button><br>
 
 <router-outlet></router-outlet>
-
+</div>
+</body>
