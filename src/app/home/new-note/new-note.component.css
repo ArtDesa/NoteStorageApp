@@ -1,6 +1,86 @@
 h1 {
-    font-size: 30px;
+    font-size: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
 div {
     font-size: 30px;
 }
+
+body {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: grid;
+}
+
+#titleDiv {
+    display: grid;
+     
+}
+
+#insideBody{
+    padding-top: 10vh;
+}
+
+#titleInput {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#titleSpan {
+    padding-top: 10px;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+#bodyLabel {
+    padding-bottom: 10px;
+}
+
+#bodyInput {
+    background-color: #f8f8f8;
+    width: 50vw;
+    height: 30vh;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 25px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#bodySpan {
+    padding-top: 20px;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+#favLabel {
+    color: #FFD700;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-weight: bold;
+}
+
+#ynDiv {
+    padding-top: 10px;
+    display: flex;
+}
+
+#noDiv {
+    padding-left: 30px;
+}
+
+#addButton {
+    margin-top: 20px;
+}
+
+.button {
+    font-size: 25px;
+}
+

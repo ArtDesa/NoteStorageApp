@@ -5,27 +5,29 @@
 
 <h2>Your Favorites!</h2><br>
 <div id="favoriteNotesList">
-<div *ngFor="let obj of notes">
-    <div *ngIf="obj.favorite === true">
-        {{obj.title}}<br>
-        {{obj.body}}<br>
-        {{obj.dateCreated}}<br>
-        {{obj.favorite}}<br>
-        {{obj.noteID}}<br><br><br><br>
+    <div *ngFor="let obj of notes">
+        <div id="aFavNote" *ngIf="obj.favorite === true">
+            {{obj.title}}<br>
+            {{obj.body}}<br>
+            {{obj.dateCreated}}<br>
+            {{obj.favorite}}<br>
+            {{obj.noteID}}<br><br><br><br>
+        </div>
     </div>
-</div>
 </div>
 <br><h2>3 Most Recent Notes:</h2><br>
 <!-- last 3 notes in array. If notes < 3 -> loop all. If notes > 3, loop last 3  -->
 <!-- Uses notes.slice(-3) to get last 3 notes  -->
 <div id="mostRecentList">
-<div *ngFor="let obj of lastThreeNotes">
-    {{obj.title}}<br>
-    {{obj.body}}<br>
-    {{obj.dateCreated}}<br>
-    {{obj.favorite}}<br>
-    {{obj.noteID}}<br><br><br><br>
-</div>
+    <div *ngFor="let obj of lastThreeNotes">
+        <div id="aRecentNote">
+            {{obj.title}}<br>
+            {{obj.body}}<br>
+            {{obj.dateCreated}}<br>
+            {{obj.favorite}}<br>
+            {{obj.noteID}}<br><br><br><br>
+        </div>
+    </div>
 </div>
 <button id="viewNoteButton" class="button" (click)="goToNotes()">View All Notes</button><br><br>
 
