@@ -13,12 +13,6 @@ body {
     background: linear-gradient(to right, #6481de, #b8b8c4, #6481de);
     overflow: auto;
 } 
- 
-#aRecentNote {
-    background: #E8E8E8;
-    margin: 20px;
-    border: 1px solid black; 
-}
 
 #insideBody {
     margin: auto;
@@ -43,7 +37,7 @@ body {
     margin: auto;
 }
 
-#valuesDiv {
+#valuesFavDiv {
     display: grid;
     margin-bottom: 20px;
     margin-top: 15px;
@@ -56,6 +50,30 @@ body {
 #mostRecentList {
     border: 2px solid black;
     padding: 20px;
+}
+
+#aRecentNote {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+#recentNote {
+    border: 1px solid black;
+    background: #E8E8E8;
+    padding: 30px;
+    margin: auto;
+}
+
+#valuesLastDiv {
+    display: grid;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+#innerDateDiv2 {
+    margin-bottom: 10px;
 }
 
 #viewNoteButton {

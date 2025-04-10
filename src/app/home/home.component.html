@@ -11,7 +11,7 @@
                 {{obj.title}}<br><br>
                 {{obj.body}}
             </div>
-            <div id="valuesDiv">
+            <div id="valuesFavDiv">
                 <div id="innerDateDiv">
                     <label id="dateLabel">Date created: </label>{{obj.dateCreated}}
                 </div>
@@ -29,11 +29,19 @@
 <div id="mostRecentList">
     <div *ngFor="let obj of lastThreeNotes">
         <div id="aRecentNote">
-            {{obj.title}}<br>
-            {{obj.body}}<br>
-            {{obj.dateCreated}}<br>
-            {{obj.favorite}}<br>
-            {{obj.noteID}}<br><br><br><br>
+            <div id="recentNote">
+                {{obj.title}}<br><br>
+                {{obj.body}}
+            </div>
+            <div id="valuesLastDiv">
+                <div id="innerDateDiv2">
+                    <label id="dateLabel">Date created: </label>{{obj.dateCreated}}
+                </div>
+                <div>
+                    <label id="favLabel2">Is favorite?: </label>{{obj.favorite}}
+                    {{obj.noteID}}
+                </div>
+            </div>
         </div>
     </div>
 </div>
