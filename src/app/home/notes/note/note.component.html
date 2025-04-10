@@ -1,9 +1,27 @@
+
 <body>
-    {{note.title}}<br><br>
-    {{note.body}}<br><br>
-    {{note.dateCreated}}<br>
-    {{note.favorite}}<br>
-    {{note.noteID}}<br>
-    <button (click)="editNote()">Edit Note</button><br>
-    <button (click)="deleteNote()">Delete Note</button><br><br><br>
+
+    <div id="noteDiv">
+        {{note.title}}<br><br>
+        {{note.body}}<br><br>
+    </div>
+    <div id="valuesDiv">
+        <div id="dateDiv">
+            <label id="dateLabel">Date created: </label>{{note.dateCreated}}
+        </div>
+        <div id="favDiv">
+            <label id="favLabel">Is favorite?: </label>{{note.favorite}}
+            {{note.noteID}}
+        </div>
+    </div>
+
+    <div id="buttonsDiv">
+        <div id="editButton" class="buttonDiv">
+            <button (click)="editNote()">Edit Note</button>
+        </div>
+        <div id="deleteButton" class="buttonDiv">
+            <button (click)="deleteNote()">Delete Note</button>
+        </div>
+    </div>
+
 </body>

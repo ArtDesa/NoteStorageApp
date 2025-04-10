@@ -21,10 +21,10 @@ body {
 
 #listContainer {
     border: 4px solid black;
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
-#eachNote {
-    border: 2px solid black;
-    margin: 20px;
+button {
+    font-weight: bold;
+    font-size: 16px;
 }

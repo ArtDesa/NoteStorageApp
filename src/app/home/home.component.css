@@ -12,16 +12,10 @@ body {
     display: grid;
     background: linear-gradient(to right, #6481de, #b8b8c4, #6481de);
     overflow: auto;
-}
-
-#aFavNote {
-    background-color: #f8f8f8;
-    margin: 20px;
-    border: 1px solid black;
-}
-
+} 
+ 
 #aRecentNote {
-    background-color: #f8f8f8;
+    background: #E8E8E8;
     margin: 20px;
     border: 1px solid black; 
 }
@@ -33,6 +27,30 @@ body {
 #favoriteNotesList{
     border: 2px solid black;
     padding: 20px;
+}
+
+#aFavNote {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+#noteDiv {
+    border: 1px solid black;
+    background: #E8E8E8;
+    padding: 30px;
+    margin: auto;
+}
+
+#valuesDiv {
+    display: grid;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+#innerDateDiv {
+    margin-bottom: 10px;
 }
 
 #mostRecentList {
@@ -48,9 +66,12 @@ body {
     margin-top: 30px;
 }
 
-#labelForDate {
-    font-family: 'Poppins', sans-serif;
+label {
     font-weight: bold;
+}
+
+#labelForDate {
+    font-family: 'Poppins', sans-serif; 
     font-size: 1.25em;
 }
 
