@@ -12,6 +12,12 @@ body {
     height: 100%;
     justify-content: center;
     display: grid;
+    background: linear-gradient(to bottom, #b8b8c4, #6481de, #000079);
+}
+
+h1 {
+    font-size: 2.30em;
+    margin-bottom: 30px;
 }
 
 #insideBody{
@@ -21,15 +27,43 @@ body {
 .loginLabel {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
+    font-size: 1.50em;
 }
 
 .inputBox {
+    width: 300px;
+    height: 25px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+}
+
+#loginForm {
     margin-bottom: 20px;
 }
 
-.button { 
+#userDiv, #passDiv, #confirmDiv {
+    margin-bottom: 20px;
+}
+
+.spanDiv {
+    margin-top: 10px;
+}
+
+span {
+    font-weight: bold;
+    padding-top: 20px;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+button { 
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
+    font-size: 1.25em;
+}
+
+#loginDiv {
+    margin-top: 30px;
 }
 
 #registerButton {

@@ -15,11 +15,11 @@ body {
     height: 100%;
     justify-content: center;
     display: grid;
+    background: linear-gradient(to right, #6481de, #b8b8c4, #6481de);
 }
 
 #titleDiv {
     display: grid;
-     
 }
 
 #insideBody{
@@ -53,6 +53,7 @@ body {
     padding: 10px;
     font-size: 25px;
     font-family: "Times New Roman", Times, serif;
+    border: 1px solid #ccc;
 }
 
 #bodySpan {

@@ -6,13 +6,9 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: #000000;
-    /*background-color: #f7f7f7;*/
-    /*background: linear-gradient(to bottom, #b8b8c4, #6481de, #000079);*/ /*#8282f1*/
+    color: #000000; 
     margin: 0;
     padding: 0;
     height: 100%;
     background-size: cover;
-    
-    
 }

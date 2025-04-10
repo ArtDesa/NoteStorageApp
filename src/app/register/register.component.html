@@ -1,31 +1,55 @@
 <html>
 <body>
-<div id="insideBody">
-<h1>Please fill out the following to register: </h1>
-<br>
-<form class="registerForm" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
-    <label class="registerLabel">Username:</label><br>
-    <input class="inputBox" ngModel name="username" #username="ngModel" required minlength="6">
-    <span style="color:red" *ngIf="username.touched && username.invalid"><br>*Username is required of at least 6 characters.</span>
-    <br>
+    <div id="insideBody">
+        <h1>Please fill out the following to register:</h1>
 
-    <label class="registerLabel">Password:</label><br>
-    <input class="inputBox" ngModel name="password" #password="ngModel" required>
-    <span style="color:red" *ngIf="password.touched && password.errors?.['required']"><br>*Password is required, please enter a password.</span>
-    <br>
+        <div id="formDiv">
+            <form id="registerForm" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+                <div id="userDiv">
+                    <div>
+                        <label class="registerLabel">Username:</label>
+                    </div>
+                    <div>
+                        <input class="inputBox" ngModel name="username" #username="ngModel" required minlength="6">
+                    </div>
+                    <div class="spanDiv">
+                        <span style="color:red" *ngIf="username.touched && username.invalid">*Username is required of at least 6 characters.</span>
+                    </div>
+                </div>
+                
+                <div id="passDiv">
+                    <div>
+                        <label class="registerLabel">Password:</label>
+                    </div>
+                    <div>
+                        <input class="inputBox" ngModel name="password" #password="ngModel" required>
+                    </div>
+                    <div class="spanDiv">
+                        <span style="color:red" *ngIf="password.touched && password.errors?.['required']">*Password is required, please enter a password.</span>
+                    </div>
+                </div>
 
-    <label class="registerLabel">Confirm Password:</label><br>
-    <input class="inputBox" ngModel name="confirmPassword" #confirmPassword="ngModel" required>
-    <span style="color:red" *ngIf="confirmPassword.touched && confirmPassword.invalid"><br>*Confirm Password is required, please enter a username.</span>
-    <br>
-    
-    <button class="button" type="submit" [disabled]="registerForm.form.invalid">Submit</button>
-    <br><br>
-
-</form>
-<div>
-    <button class="button" (click)="goToLogin()">Back to Login</button>
-</div>
-</div>
+                <div id="confirmDiv">
+                    <div>
+                        <label class="registerLabel">Confirm Password:</label>
+                    </div>
+                    <div>
+                        <input class="inputBox" ngModel name="confirmPassword" #confirmPassword="ngModel" required>
+                    </div>
+                    <div class="spanDiv">
+                        <span style="color:red" *ngIf="confirmPassword.touched && confirmPassword.invalid">*Confirm Password is required, please repeat the password.</span>
+                    </div>
+                </div>
+                
+                <div id="submitDiv">
+                    <button type="submit" [disabled]="registerForm.form.invalid">Submit</button>
+                </div>
+                
+            </form>
+            <div>
+                <button (click)="goToLogin()">Back to Login</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

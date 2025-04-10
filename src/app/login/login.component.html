@@ -1,29 +1,50 @@
 <html>
 <body>
-<div id="insideBody">
-<h1>Please log in!</h1><br>
+    <div id="insideBody">
+        <h1>Please log in!</h1>
 
-<form class="loginForm" [formGroup]="loginForm" (ngSubmit)="login()">
-    <label class="loginLabel">Username:</label><br>
-    <input class="inputBox" formControlName="username">
-    <span style="color:red" *ngIf="loginForm.get('username').touched && username.invalid"><br>*Username is requires at least 6 characters.</span>
-    <br>
+        <form id="loginForm" [formGroup]="loginForm" (ngSubmit)="login()">
+            <div id="userDiv">
+                <div>
+                    <label class="loginLabel">Username:</label>
+                </div>
+                <div>
+                    <input class="inputBox" formControlName="username">
+                </div>
+                <div class="spanDiv">
+                    <span style="color:red" *ngIf="loginForm.get('username').touched && username.invalid">*Username is requires at least 6 characters.</span>
+                </div>
+            </div>
+            
+            <div id="passDiv">
+                <div>
+                    <label class="loginLabel">Password:</label>
+                </div>
+                <div>
+                    <input class="inputBox" formControlName="password">
+                </div>
+                <div class="spanDiv">
+                    <span style="color:red" *ngIf="loginForm.get('password').touched && password.invalid">*Please provide a password</span>
+                </div>
+            </div>
 
-    <label class="loginLabel">Password:</label><br>
-    <input class="inputBox" formControlName="password">
-    <span style="color:red" *ngIf="loginForm.get('password').touched && password.invalid">*Please provide a password</span>
-    <br>
+            <div id="confirmDiv">
+                <div>
+                    <label class="loginLabel">Confirm Password:</label>
+                </div>
+                <div>
+                    <input class="inputBox" formControlName="confirmPassword">
+                </div>
+            </div>
 
-    <label class="loginLabel">Confirm Password:</label><br>
-    <input class="inputBox" formControlName="confirmPassword"><br>
-
-    <br><button class="button" type="submit" [disabled]="loginForm.invalid">Login</button> 
-    <br><br>
-    
-</form>
-<div>
-<button id="registerButton" class="button" (click)="goToRegister()">Register</button>
-</div>
-</div>
+            <div id="loginDiv">
+                <button type="submit" [disabled]="loginForm.invalid">Login</button>
+            </div>
+            
+        </form>
+        <div>
+            <button id="registerButton" (click)="goToRegister()">Register</button>
+        </div>
+    </div>
 </body>
 </html>
