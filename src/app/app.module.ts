@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -31,30 +31,23 @@ const routes: Routes = [
   {path:'**', component: PageNotFoundComponent}
 ]
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    RegisterComponent,
-    LoginComponent,
-    ConfirmDirective,
-    PageNotFoundComponent,
-    NotesComponent,
-    NoteByDateComponent,
-    NewNoteComponent,
-    EditNoteComponent,
-    NoteComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot(routes),
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        RegisterComponent,
+        LoginComponent,
+        ConfirmDirective,
+        PageNotFoundComponent,
+        NotesComponent,
+        NoteByDateComponent,
+        NewNoteComponent,
+        EditNoteComponent,
+        NoteComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule.forRoot(routes)], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
 /*
 NOTE: DO NOT FIX VULNERABILITIES WITH THE npm audit commmand, THIS WILL BREAK THE PROJECT
