@@ -31,26 +31,28 @@ const routes: Routes = [
   {path:'**', component: PageNotFoundComponent}
 ]
 
-@NgModule({ declarations: [
-        AppComponent,
-        HomeComponent,
-        RegisterComponent,
-        LoginComponent,
-        ConfirmDirective,
-        PageNotFoundComponent,
-        NotesComponent,
-        NoteByDateComponent,
-        NewNoteComponent,
-        EditNoteComponent,
-        NoteComponent
-    ],
-    bootstrap: 
-        [AppComponent], 
-        imports: 
-        [BrowserModule,
-        FormsModule,
-        ReactiveFormsModule,
-        RouterModule.forRoot(routes)], providers: [provideHttpClient(withInterceptorsFromDi())] })
+@NgModule({ 
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    RegisterComponent,
+    LoginComponent,
+    ConfirmDirective,
+    PageNotFoundComponent,
+    NotesComponent,
+    NoteByDateComponent,
+    NewNoteComponent,
+    EditNoteComponent,
+    NoteComponent
+  ],
+  bootstrap: [AppComponent], 
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
+  ], 
+  providers: [provideHttpClient(withInterceptorsFromDi())] })
         
 export class AppModule { }
 /*
