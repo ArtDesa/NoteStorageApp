@@ -44,10 +44,14 @@ const routes: Routes = [
         EditNoteComponent,
         NoteComponent
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
+    bootstrap: 
+        [AppComponent], 
+        imports: 
+        [BrowserModule,
         FormsModule,
         ReactiveFormsModule,
         RouterModule.forRoot(routes)], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        
 export class AppModule { }
 /*
 NOTE: DO NOT FIX VULNERABILITIES WITH THE npm audit commmand, THIS WILL BREAK THE PROJECT
