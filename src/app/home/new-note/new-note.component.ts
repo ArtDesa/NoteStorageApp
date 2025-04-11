@@ -23,9 +23,10 @@ export class NewNoteComponent implements OnInit{
   addToNotes(noteForm){
     
     //Obtains the current date
-    var dateMonth = new Date().getMonth() + 1;
-    var dateDay = new Date().getDate() + 1;
-    var dateYear = new Date().getFullYear();
+    var currentDate = new Date();
+    var dateMonth = currentDate.getMonth() + 1;
+    var dateDay = currentDate.getDate();
+    var dateYear = currentDate.getFullYear();
     
     var dateString = dateMonth + "/" + dateDay + "/" + dateYear;
 

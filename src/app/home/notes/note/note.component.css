@@ -7,6 +7,10 @@ body {
     padding: 30px;
     background: #E8E8E8;
     border: 2px solid black;
+    width: 500px;
+    min-height: 55px;
+    max-height: 200px;
+    overflow-y: auto;
     /*margin: 20px;*/
 }
 

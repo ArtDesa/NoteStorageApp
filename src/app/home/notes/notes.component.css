@@ -1,6 +1,6 @@
 h1 {
     font-size: 2em;
-    padding-top: 15%;
+    padding-top: 40px;
 }
 
 body {
@@ -16,15 +16,16 @@ body {
 }
 
 #homeButtonDiv {
-    padding-bottom: 10%;
+    margin-bottom: 30px;
 }
 
 #listContainer {
     border: 4px solid black;
+    margin-bottom: 100px;
     /*padding: 20px;*/
 }
 
 button {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.25em; /* 16px */
 }

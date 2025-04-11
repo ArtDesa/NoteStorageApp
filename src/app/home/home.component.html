@@ -1,63 +1,68 @@
 
 <body>
-<div id="insideBody">
-<h1>Welcome to NoteStore!</h1><br>
-
-<h2>Your Favorites!</h2>
-<div id="favoriteNotesList">
-    <div *ngFor="let obj of notes">
-        <div id="aFavNote" *ngIf="obj.favorite === true">
-            <div id="noteDiv">
-                {{obj.title}}<br><br>
-                {{obj.body}}
-            </div>
-            <div id="valuesFavDiv">
-                <div id="innerDateDiv">
-                    <label id="dateLabel">Date created: </label>{{obj.dateCreated}}
-                </div>
-                <div id="favDiv">
-                    <label id="favLabel">Is favorite?: </label>{{obj.favorite}}
-                    {{obj.noteID}}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br><h2>Your 3 Most Recent Notes:</h2>
-<!-- last 3 notes in array. If notes < 3 -> loop all. If notes > 3, loop last 3  -->
-<!-- Uses notes.slice(-3) to get last 3 notes  -->
-<div id="mostRecentList">
-    <div *ngFor="let obj of lastThreeNotes">
-        <div id="aRecentNote">
-            <div id="recentNote">
-                {{obj.title}}<br><br>
-                {{obj.body}}
-            </div>
-            <div id="valuesLastDiv">
-                <div id="innerDateDiv2">
-                    <label id="dateLabel">Date created: </label>{{obj.dateCreated}}
-                </div>
-                <div>
-                    <label id="favLabel2">Is favorite?: </label>{{obj.favorite}}
-                    {{obj.noteID}}
+    <div id="insideBody">
+        <h1>Welcome to NoteStore!</h1>
+        <div id="favSection" class="listSection">
+            <h2>Your Favorites!</h2>
+            <div id="favoriteNotesList">
+                <div *ngFor="let obj of notes">
+                    <div id="aFavNote" *ngIf="obj.favorite === true">
+                        <div id="noteDiv">
+                            <div class="noteTitle">{{obj.title}}</div>
+                            {{obj.body}}
+                        </div>
+                        <div id="valuesFavDiv">
+                            <div id="innerDateDiv">
+                                <label id="dateLabel">Date created: </label>{{obj.dateCreated}}
+                            </div>
+                            <div id="favDiv">
+                                <label id="favLabel">Is favorite?: </label>{{obj.favorite}}
+                                {{obj.noteID}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div id="recentSection" class="listSection">
+            <br><h2>Your 3 Most Recent Notes:</h2>
+            <!-- last 3 notes in array. If notes < 3 -> loop all. If notes > 3, loop last 3  -->
+            <!-- Uses notes.slice(-3) to get last 3 notes  -->
+            <div id="mostRecentList">
+                <div *ngFor="let obj of lastThreeNotes">
+                    <div id="aRecentNote">
+                        <div id="recentNote">
+                            <div class="noteTitle">{{obj.title}}</div>
+                            {{obj.body}}
+                        </div>
+                        <div id="valuesLastDiv">
+                            <div id="innerDateDiv2">
+                                <label id="dateLabel">Date created: </label>{{obj.dateCreated}}
+                            </div>
+                            <div>
+                                <label id="favLabel2">Is favorite?: </label>{{obj.favorite}}
+                                {{obj.noteID}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="viewNoteButton" class="button" (click)="goToNotes()">View All Notes</button>
+
+        <div id="dateDiv">
+            <label id="labelForDate">Please provide the date of a note:</label>
+            <div id="dateBox">
+                <input type="date" name="noteDate" id="noteDate" [(ngModel)]="date">
+                <button id="searchNoteButton" class="button" (click)="goToNote()">Search for a note</button>
+                <!--{{date}}-->
+            </div>
+        </div>
+
+        <button id="addNewNoteButton" class="button" (click)="goToNewNote()">Add a new note</button>
+
+        <router-outlet></router-outlet>
     </div>
-</div>
-<button id="viewNoteButton" class="button" (click)="goToNotes()">View All Notes</button><br><br>
-
-<div id="dateDiv">
-<label id="labelForDate">Please provide the date of a note:</label><br>
-<div id="dateBox">
-<input type="date" name="noteDate" id="noteDate" [(ngModel)]="date">
-<button id="searchNoteButton" class="button" (click)="goToNote()">Search for a note</button><br><br>
-<!--{{date}}-->
-</div>
-</div>
-
-<button id="addNewNoteButton" class="button" (click)="goToNewNote()">Add a new note</button><br>
-
-<router-outlet></router-outlet>
-</div>
 </body>

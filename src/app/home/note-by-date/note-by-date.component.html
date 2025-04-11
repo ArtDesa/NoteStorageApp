@@ -1,18 +1,34 @@
-<!--<p>note-by-date works!</p>-->
-
-<button (click)="goToHome()">Back</button><br><br>
-
-<h1>Note details that match {{dateString}}<h1><br><br>
-<br><br><br><br>
-
-<!-- Loop for all notes that match requested date to search for -->
-<div *ngFor="let obj of allNotes">
-    <div *ngIf="obj.dateCreated == dateString">
-        Title: {{obj.title}}<br><br>
-        {{obj.body}}<br><br>
-        Date Created: {{obj.dateCreated}}<br>
-        Favorite: {{obj.favorite}}<br>
+<body>
+    <div id="insideBodyDiv">
+        <div id="homeButtonDiv">
+            <button (click)="goToHome()">Back</button>
+        </div>
+        <div id="headerDiv">
+            <h1>Note details that match date: {{dateString}}</h1>
+        </div>
+        
+        <!-- Loop for all notes that match requested date to search for -->
+        <div id="notesList">
+            <div id="forLoopDiv" *ngFor="let obj of allNotes">
+                <div id="aNote" *ngIf="obj.dateCreated == dateString">
+                    <div id="noteItself">
+                        <div id="titleDiv" class="surrText">
+                            <label>Title: </label>{{obj.title}}
+                        </div>
+                        <div id="bodyDiv">
+                            {{obj.body}}
+                        </div>
+                    </div>
+                    <div id="detailsDiv">
+                        <div id="dateDiv" class="surrText">
+                            <label>Date Created: </label>{{obj.dateCreated}}
+                        </div>
+                        <div id="favDiv" class="surrText">
+                            <label>Favorite: </label>{{obj.favorite}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-
+</body>
