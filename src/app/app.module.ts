@@ -52,9 +52,11 @@ const routes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ], 
-  providers: [provideHttpClient(withInterceptorsFromDi())] })
+  providers: [provideHttpClient(withInterceptorsFromDi())] 
+})
         
 export class AppModule { }
+
 /*
 Has now been updated to Angular 18 from Angular 16 (original). 
 1 notable change is HttpClientModule being deprecated and replaced with the provideHttpClient() function.
@@ -115,5 +117,5 @@ bootstrapApplication(AppComponent, {
   ],
 });
 ```
-This change simplifies the configuration process and aligns with Angular's evolving architecture. Let me know if you'd like help adapting your project further! 🚀
+This change simplifies the configuration process and aligns with Angular's evolving architecture. Let me know if you'd like help adapting your project further!
 */
